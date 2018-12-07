@@ -1,0 +1,52 @@
+[
+  {
+    "time": "1:15p",
+    "Team 1": "Anthony",
+    "Team 2": "Carlito"
+  },
+  {
+    "time": "1:45p",
+    "Team 1": "Josh",
+    "Team 2": "Carlito"
+  },
+  {
+    "time": "2:15p",
+    "Team 1": "Erwin",
+    "Team 2": "George"
+  },
+  {
+    "time": "2:45p",
+    "Team 1": "Jeremia",
+    "Team 2": "George"
+  },
+  {
+    "time": "3:15p",
+    "Team 1": "Josh",
+    "Team 2": "Chang"
+  },
+  {
+    "time": "3:45p",
+    "Team 1": "Chan",
+    "Team 2": "Jeremia"
+  },
+  {
+    "time": "4:15p",
+    "Team 1": "Chang",
+    "Team 2": "Henry"
+  },
+  {
+    "time": "4:45p",
+    "Team 1": "Anthony",
+    "Team 2": "Julian"
+  },
+  {
+    "time": "5:15p",
+    "Team 1": "Chan",
+    "Team 2": "Henry"
+  },
+  {
+    "time": "5:45pw",
+    "Team 1": "Julian",
+    "Team 2": "Erwin"
+  }
+]

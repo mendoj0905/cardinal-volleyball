@@ -1,0 +1,8 @@
+<div class="cardinal-team-ranking" *ngIf="rankData">
+  <cardinal-table
+    [title]="'Team Standings'"
+    [displayColumns]="columnKeys"
+    [columnHeaders]="columnHeaders"
+    [data]="rankData">
+  </cardinal-table>
+</div>
