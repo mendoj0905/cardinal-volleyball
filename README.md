@@ -26,11 +26,11 @@ npm install
 To run start frontend, run this command line: 
 
 ```Shell
-npm start
+ng serve
 ```
 
 To run unit test, open second terminal and run command line 
 
 ```Shell 
-npm test
+ng test
 ```
