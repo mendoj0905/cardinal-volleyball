@@ -1,4 +1,4 @@
-#Cardinal League Volleyball 
+# Cardinal League Volleyball 
 
 This is website for Volleyball League in Jersey City called Cardinal League Volleyball. Allows League Commissioner to manage league and players to be able to register and view game schedules and more. 
 
