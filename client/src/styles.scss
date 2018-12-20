@@ -27,6 +27,19 @@ $frontend-theme: mat-light-theme($frontend-primary, $frontend-accent, $frontend-
 @include angular-material-theme($frontend-theme);
 
 /* You can add global styles to this file, and also import other style files */
+$cardinal-container-color: #b19c9c;
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #d3d3d3; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #c15252; }
+
+.mat-drawer-side {
+  border-right: none;
+}
+
+.mat-drawer-container {
+  background-color: $cardinal-container-color;
+}
+
+.mat-drawer {
+  background-color: $cardinal-container-color;
+}
