@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { CardinalMatModule } from '../../material-module';
 import { CardinalNavButtonComponent } from './cardinal-nav-button.component';
 
 describe('CardinalNavButtonComponent', () => {
@@ -8,6 +9,7 @@ describe('CardinalNavButtonComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ CardinalMatModule ],
       declarations: [ CardinalNavButtonComponent ]
     })
     .compileComponents();
@@ -19,7 +21,7 @@ describe('CardinalNavButtonComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create nav button', () => {
     expect(component).toBeTruthy();
   });
 });

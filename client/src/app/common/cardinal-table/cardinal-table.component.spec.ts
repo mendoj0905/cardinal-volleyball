@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CardinalMatModule } from '../../material-module';
 
 import { CardinalTableComponent } from './cardinal-table.component';
 
@@ -8,6 +9,7 @@ describe('CardinalTableComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ CardinalMatModule ],
       declarations: [ CardinalTableComponent ]
     })
     .compileComponents();
@@ -19,7 +21,7 @@ describe('CardinalTableComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create table', () => {
     expect(component).toBeTruthy();
   });
 });
