@@ -1,0 +1,22 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "linterOptions": {
+      "exclude": [
+        "./**/*.spec.ts"
+      ]
+    },
+    "rules": {
+        "deprecation": {
+          "severity": "warn"
+        },
+        "interface-name": [true, "never-prefix"],
+        "no-console": [true, "time", "timeEnd", "trace"],
+        "object-literal-sort-keys": false,
+        "trailing-comma": false,
+        "quotemark": [true, "single", "avoid-escape"]
+    },
+    "rulesDirectory": []
+}

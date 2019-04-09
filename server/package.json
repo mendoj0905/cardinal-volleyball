@@ -6,6 +6,7 @@
   "scripts": {
     "tsc": "tsc",
     "start:local": "nodemon --watch 'src/*.ts' --watch 'libs/**/*.ts' --exec 'ts-node' src/index.ts",
+    "tslint": "tslint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -27,6 +28,7 @@
     "@types/mongodb": "^3.1.22",
     "@types/mongoose": "^5.3.24",
     "nodemon": "^1.18.10",
+    "tslint": "^5.15.0",
     "typescript": "^3.3.3333"
   }
 }
