@@ -1,43 +1,36 @@
 import * as bodyParser from 'body-parser';
 import express from 'express';
 import * as http from 'http';
-import * as mongoose from 'mongoose';
+import mongoose from 'mongoose';
 import { Db } from 'mongodb';
 import { ApolloServer } from 'apollo-server-express';
 import { schema } from '../libs/graphql';
 
-export class App {
+export class Server {
 
   private static db: Db;
-  private static mongoClient: any;
   private cardinalGqlServer: express.Application;
   private apolloServer: ApolloServer;
 
   constructor() {
     this.cardinalGqlServer = express();
     this.initializeMiddleware();
-    this.apolloServer = App.getApolloServer();
+    Server.connectDb();
+    this.apolloServer = Server.getApolloServer();
     this.apolloServer.applyMiddleware({ app:  this.cardinalGqlServer })
   }
 
   public static getApolloServer(): ApolloServer {
-
     return new ApolloServer({ schema });
-
   }
 
-  public static async connectDb(): Promise<Db> {
+  public static async connectDb() {
+    const url = 'mongodb://cardinal-mongo:3001/cardinal'; // TODO: move to application.json configuration file
 
-    const url = 'mongodb://cardinal-mongo:3002/cardinal';
-
-    if (App.db) {
-      return App.db
-    }
-
-    this.mongoClient = await mongoose.connect(url);
+    mongoose.connect(url, { useNewUrlParser: true });
+    mongoose.connection.on('error', error => console.log(error));
 
     console.log(`Connected to mongodb at ${url}`);
-    return App.db;
   }
 
   private initializeMiddleware() {
@@ -45,7 +38,8 @@ export class App {
   }
 
   public startServer(): http.Server {
-    const port = 3002;
+    const port = 3002; // TODO: move to application.json configuration file
+
     return this.cardinalGqlServer.listen(port, () => {
       console.log(`Graphql is running on http://localhost:${port}/graphql`);
     });
