@@ -10,7 +10,7 @@ export class ApiService {
     private http: HttpClient
   ) { }
 
-  getTableData(path: string) {
+  getTableData(path: string): any {
     return this.http.get<any>(path);
   }
 

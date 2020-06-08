@@ -13,11 +13,11 @@ export class HeaderComponent implements OnInit {
   year: string;
 
   constructor(
-    private api: ApiService
+    private apiService: ApiService
   ) { }
 
   ngOnInit() {
-    this.api.getTableData('assets/data/season.json')
+    this.apiService.getTableData('assets/data/season.json')
       .subscribe((data: Season) => {
         this.season = data.season;
         this.year = data.year;
